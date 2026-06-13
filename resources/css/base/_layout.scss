@@ -1,0 +1,18 @@
+.container {
+    max-width: 1440px; // твоя желаемая ширина
+    margin: 0 auto; // центрирование
+    padding: 0 24px; // боковые отступы
+
+    // Адаптивные отступы
+    @media (max-width: 1200px) {
+        padding: 0 20px;
+    }
+
+    @media (max-width: 768px) {
+        padding: 0 16px;
+    }
+
+    @media (max-width: 480px) {
+        padding: 0 12px;
+    }
+}

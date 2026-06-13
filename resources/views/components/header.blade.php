@@ -1,8 +1,8 @@
 <header>
-    <div class="header-container">
+    <div class="container header-container">
         <!-- Логотип -->
         <div>
-            <a href="/" class="logo">RentHouse</a>
+            <a href="/" class="logo">{{ $siteName }}</a>
         </div>
 
         <!-- Навигация -->

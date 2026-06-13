@@ -11,9 +11,17 @@ class Header extends Component
     /**
      * Create a new component instance.
      */
+
+    public string $siteName;
     public function __construct()
     {
-        //
+        $this->siteName = config('app.name');
+
+    //     dd([
+    //     'config_app_name' => config('app.name'),
+    //     'env_app_name'    => env('APP_NAME'),
+    //     'siteName'        => $this->siteName
+    // ]);
     }
 
     /**
