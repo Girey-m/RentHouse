@@ -16,17 +16,8 @@ class Header extends Component
     public function __construct()
     {
         $this->siteName = config('app.name');
-
-    //     dd([
-    //     'config_app_name' => config('app.name'),
-    //     'env_app_name'    => env('APP_NAME'),
-    //     'siteName'        => $this->siteName
-    // ]);
     }
 
-    /**
-     * Get the view / contents that represent the component.
-     */
     public function render(): View|Closure|string
     {
         return view('components.header');

@@ -1,7 +1,7 @@
 .container {
-    max-width: 1440px; // твоя желаемая ширина
-    margin: 0 auto; // центрирование
-    padding: 0 24px; // боковые отступы
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 0 24px;
 
     // Адаптивные отступы
     @media (max-width: 1200px) {
