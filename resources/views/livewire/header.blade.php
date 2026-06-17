@@ -32,6 +32,31 @@
             </a>
         </nav>
 
+        <!-- Место для поиска (добавим позже) -->
+<!-- Поиск -->
+<div class="header-search" style="position: relative;">
+    <input
+        type="text"
+        wire:model.live="search"
+        wire:model.debounce.300ms="search"
+        placeholder="Поиск жилья: город, район, метро..."
+        class="search-input"
+    >
+
+    <!-- Выпадающий список результатов -->
+    @if (!empty($searchResults))
+        <div class="search-results-dropdown">
+            @foreach ($searchResults as $result)
+                <a href="#" class="search-result-item">
+                    <div class="result-title">{{ $result['title'] }}</div>
+                    <div class="result-address">{{ $result['address'] }}</div>
+                    <div class="result-price">{{ $result['price'] }}</div>
+                </a>
+            @endforeach
+        </div>
+    @endif
+</div>
+
         <!-- Блок действий -->
         <div class="header-actions" role="group" aria-label="Действия пользователя">
             @if (Route::has('login'))
@@ -62,16 +87,5 @@
                 <a href="#" class="btn btn-primary">Разместить объявление</a>
             @endif
         </div>
-
-        <!-- Мобильная кнопка меню -->
-        <!-- <button class="mobile-menu-button"
-                aria-label="Открыть меню"
-                aria-expanded="false"
-                aria-controls="mobile-menu">
-            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
-            </svg>
-        </button> -->
-
     </div>
 </header>

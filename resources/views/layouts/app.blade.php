@@ -8,16 +8,21 @@
 
     @vite(['resources/css/app.scss', 'resources/js/app.js'])
 
+    {{-- Livewire Styles --}}
+    @livewireStyles
+
     @yield('meta')
 </head>
 <body>
-    <x-header />
+    <livewire:header />
 
     <main>
         @yield('content')
     </main>
 
-    {{-- <x-footer /> --}}
+    {{-- Livewire Scripts (обязательно перед закрытием body) --}}
+    @livewireScripts
 
+    {{-- <x-footer /> --}}
 </body>
 </html>
