@@ -14,7 +14,7 @@
     @yield('meta')
 </head>
 <body>
-    <livewire:header />
+    <x-header />
 
     <main>
         @yield('content')
